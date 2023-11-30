@@ -7,16 +7,16 @@
 | Palotai Péter | Konfiguráció összeállító weblap készítése |
 | Terdik Gergő     | Adminisztrációs alkalmazás készítése C# nyelven |
 ## Feladatok: 
-| Feladat | Státusz |
-| --- | --- |
-| Keresés a programban | ❌ |
-| Keresés árok között a programban |❌|
-| Statisztika készítése a programban | ❌ |
-| Akció beállítása a programban | ❌ |
-| Beviteli adatok módosítása, adatok duplózádásnak ellenőrzése | ❌ |
-| Alkatrészek a weboldalon | ❌ |
-| Alkatrészek kiválasztása | ❌ |
-| Konfiguráció ár összesítése | ❌ |
-| Megrendelés | ❌ |
-| Reszponzivitás | ❌ |
-| Összehasonlítás | ❌ |
+| Feladat | Státusz | Határidő |
+| --- | --- | --- |
+| Keresés a programban | ❌ | 2023.12.21 | 
+| Keresés árok között a programban |❌|  2023.12.21 |
+| Statisztika készítése a programban | ❌ |  2023.12.21 |
+| Akció beállítása a programban | ❌ |  2023.12.21 |
+| Beviteli adatok módosítása, adatok duplózádásnak ellenőrzése | ❌ |  2023.12.21 |
+| Alkatrészek a weboldalon | ❌ |  2023.12.21 |
+| Alkatrészek kiválasztása | ❌ |  2023.12.21 |
+| Konfiguráció ár összesítése | ❌ |  2023.12.21 |
+| Megrendelés | ❌ |  2023.12.21 |
+| Reszponzivitás | ❌ |  2023.12.21 |
+| Összehasonlítás | ❌ |  2023.12.21 |
