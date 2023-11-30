@@ -6,7 +6,7 @@
 | Czövek Dominik | Alkatrészek leírása (Weblap) |
 | Palotai Péter | Konfiguráció összeállító weblap készítése |
 | Terdik Gergő     | Adminisztrációs alkalmazás készítése C# nyelven |
-## Feladatok: 
+## A program funkciói: 
 | Feladat | Státusz | Határidő |
 | --- | --- | --- |
 | Keresés a programban | ❌ | 2023.12.21 | 
