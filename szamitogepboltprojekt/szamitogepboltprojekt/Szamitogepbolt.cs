@@ -163,10 +163,6 @@ namespace szamitogepboltprojekt
                 {
                     count_hdd++;
                 }
-                else
-                {
-                    Console.WriteLine("xd");
-                }
                 avg_price += element.Price;
                 
             }
