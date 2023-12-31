@@ -1,0 +1,14 @@
+C:\Users\Terdik Gergő\source\repos\szamitogepboltprojekt\szamitogepboltprojekt\bin\Debug\net7.0\szamitogepboltprojekt.exe
+C:\Users\Terdik Gergő\source\repos\szamitogepboltprojekt\szamitogepboltprojekt\bin\Debug\net7.0\szamitogepboltprojekt.deps.json
+C:\Users\Terdik Gergő\source\repos\szamitogepboltprojekt\szamitogepboltprojekt\bin\Debug\net7.0\szamitogepboltprojekt.runtimeconfig.json
+C:\Users\Terdik Gergő\source\repos\szamitogepboltprojekt\szamitogepboltprojekt\bin\Debug\net7.0\szamitogepboltprojekt.dll
+C:\Users\Terdik Gergő\source\repos\szamitogepboltprojekt\szamitogepboltprojekt\bin\Debug\net7.0\szamitogepboltprojekt.pdb
+C:\Users\Terdik Gergő\source\repos\szamitogepboltprojekt\szamitogepboltprojekt\obj\Debug\net7.0\szamitogepboltprojekt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Terdik Gergő\source\repos\szamitogepboltprojekt\szamitogepboltprojekt\obj\Debug\net7.0\szamitogepboltprojekt.AssemblyInfoInputs.cache
+C:\Users\Terdik Gergő\source\repos\szamitogepboltprojekt\szamitogepboltprojekt\obj\Debug\net7.0\szamitogepboltprojekt.AssemblyInfo.cs
+C:\Users\Terdik Gergő\source\repos\szamitogepboltprojekt\szamitogepboltprojekt\obj\Debug\net7.0\szamitogepboltprojekt.csproj.CoreCompileInputs.cache
+C:\Users\Terdik Gergő\source\repos\szamitogepboltprojekt\szamitogepboltprojekt\obj\Debug\net7.0\szamitogepboltprojekt.dll
+C:\Users\Terdik Gergő\source\repos\szamitogepboltprojekt\szamitogepboltprojekt\obj\Debug\net7.0\refint\szamitogepboltprojekt.dll
+C:\Users\Terdik Gergő\source\repos\szamitogepboltprojekt\szamitogepboltprojekt\obj\Debug\net7.0\szamitogepboltprojekt.pdb
+C:\Users\Terdik Gergő\source\repos\szamitogepboltprojekt\szamitogepboltprojekt\obj\Debug\net7.0\szamitogepboltprojekt.genruntimeconfig.cache
+C:\Users\Terdik Gergő\source\repos\szamitogepboltprojekt\szamitogepboltprojekt\obj\Debug\net7.0\ref\szamitogepboltprojekt.dll

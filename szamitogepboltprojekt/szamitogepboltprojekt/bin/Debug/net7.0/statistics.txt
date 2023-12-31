@@ -1,0 +1,9 @@
+Average price: 731965.2692307692
+Nvidia products in the list: 5
+AMD products in the list: 10
+Intel products in the list: 5
+CPUs in the list: 10
+GPUs in the list: 10
+SSDs in the list: 5
+HDDs in the list: 1
+
