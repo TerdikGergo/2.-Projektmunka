@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Számítógép Konfigurátor</title>
+    <style>
+        /* ... (az előző stílusok itt találhatók) ... */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        #configurator {
+            display: flex;
+        }
+
+        #parts-list, #selected-parts {
+            width: 45%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 10px;
+        }
+
+        .highlight {
+            border: 2px solid #007bff;
+        }
+
+        #order-btn {
+            display: block;
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #order-message {
+            margin-top: 10px;
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Alkatrészek</h2>
+
+<div id="configurator">
+    <div id="parts-list">
+        <h3>Alkatrészek listája</h3>
+        <form id="configForm">
+            <!-- CPU-k checkboxok -->
+            <h4>CPU</h4>
+            <label><input type="checkbox" name="CPU" value="Intel Core i5-13600K"> Intel Core i5-13600K - 130000 Ft</label><br>
+            <label><input type="checkbox" name="CPU" value="AMD Ryzen Threadripper PRO 7995WX"> AMD Ryzen Threadripper PRO 7995WX - 3484300 Ft</label><br>
+            <label><input type="checkbox" name="CPU" value="AMD Ryzen Threadripper 7980X"> AMD Ryzen Threadripper 7980X - 1742305 Ft</label><br>
+            <label><input type="checkbox" name="CPU" value="AMD Ryzen Threadripper PRO 7985WX"> AMD Ryzen Threadripper PRO 7985WX - 2560839 Ft</label><br>
+            <label><input type="checkbox" name="CPU" value="AMD Ryzen Threadripper PRO 7975WX"> AMD Ryzen Threadripper PRO 7975WX - 1724590 Ft</label><br>
+            <label><input type="checkbox" name="CPU" value="Intel Xeon w9-3495X"> Intel Xeon w9-3495X - 2048874 Ft</label><br>
+            <label><input type="checkbox" name="CPU" value="AMD Ryzen Threadripper PRO 5995WX"> AMD Ryzen Threadripper PRO 5995WX - 1983118 Ft</label><br>
+            <label><input type="checkbox" name="CPU" value="Intel Core i9-13900KS"> Intel Core i9-13900KS - 347837 Ft</label><br>
+            <label><input type="checkbox" name="CPU" value="Intel Core i9-14900KF"> Intel Core i9-14900KF - 242590 Ft</label><br>
+            <label><input type="checkbox" name="CPU" value="Intel Core i9-13900K"> Intel Core i9-13900K - 198263 Ft</label><br>
+
+            <!-- GPU-k checkboxok -->
+            <h4>GPU</h4>
+            <!-- ... (GPU checkboxok itt helyezkednek el) ... -->
+            <label><input type="checkbox" name="GPU" value="NVIDIA Geforce RTX 4090"> NVIDIA Geforce RTX 4090 - 887900 Ft</label><br>
+            <label><input type="checkbox" name="GPU" value="NVIDIA GeForce RTX 4080"> NVIDIA GeForce RTX 4080 - 511190 Ft</label><br>
+            <label><input type="checkbox" name="GPU" value="NVIDIA GeForce RTX 4070 Ti"> NVIDIA GeForce RTX 4070 Ti - 271276 Ft</label><br>
+            <label><input type="checkbox" name="GPU" value="AMD Radeon RX 7900 XTX"> AMD Radeon RX 7900 XTX - 340835 Ft</label><br>
+            <label><input type="checkbox" name="GPU" value="NVIDIA GeForce RTX 3090 Ti"> NVIDIA GeForce RTX 3090 Ti - 535960 Ft</label><br>
+            <label><input type="checkbox" name="GPU" value="AMD Radeon RX 7900 XT"> AMD Radeon RX 7900 XT - 348026 Ft</label><br>
+            <label><input type="checkbox" name="GPU" value="AMD Radeon RX 6950 XT"> AMD Radeon RX 6950 XT - 352224 Ft</label><br>
+            <label><input type="checkbox" name="GPU" value="AMD Radeon RX 6900 XT"> AMD Radeon RX 6900 XT - 352120 Ft</label><br>
+            <label><input type="checkbox" name="GPU" value="NVIDIA GeForce RTX 3070 Ti"> NVIDIA GeForce RTX 3070 Ti - 174055 Ft</label><br>
+            <label><input type="checkbox" name="GPU" value="AMD Radeon RX 7800 XT"> AMD Radeon RX 7800 XT - 181017 Ft</label><br>
+
+            <!-- HDD-k checkboxok -->
+            <h4>HDD</h4>
+            <label><input type="checkbox" name="HDD" value="Seagate ST8000NM000A"> Seagate ST8000NM000A - 74118 Ft</label><br>
+            <!-- ... többi HDD checkbox ... -->
+
+            <!-- SSD-k checkboxok -->
+            <h4>SSD</h4>
+            <label><input type="checkbox" name="SSD" value="Crucial T700 M.2"> Crucial T700 M.2 - 156290 Ft</label><br>
+            <label><input type="checkbox" name="SSD" value="MSI M570 M.2"> MSI M570 M.2 - 150390 Ft</label><br>
+            <label><input type="checkbox" name="SSD" value="Corsair MP700 M.2"> Corsair MP700 M.2 - 70000 Ft</label><br>
+            <label><input type="checkbox" name="SSD" value="Samsung SSD 990 PRO M.2"> Samsung SSD 990 PRO M.2 - 128690 Ft</label><br>
+            <label><input type="checkbox" name="SSD" value="WD BLACK SN850X M.2"> WD BLACK SN850X M.2 - 34290 Ft</label><br>
+        </form>
+        <!-- ... (egyéb alkatrészek checkboxai itt helyezkednek el) ... -->
+    </div>
+
+    <div id="selected-parts">
+        <h3>Kiválasztott alkatrészek</h3>
+        <div id="selected-parts-list"></div>
+        <p id="total-price"></p>
+    </div>
+</div>
+
+<button id="order-btn" onclick="checkOrder()">Megrendelés</button>
+<p id="order-message"></p>
+
+<script>
+     const partsData = {
+        CPU: [
+            { name: 'Intel Core i5-13600K', price: 130000 },
+            { name: 'AMD Ryzen Threadripper PRO 7995WX', price: 3484300 },
+            { name: 'AMD Ryzen Threadripper 7980X', price: 1742305 },
+            { name: 'AMD Ryzen Threadripper PRO 7985WX', price: 2560839 },
+            { name: 'AMD Ryzen Threadripper PRO 7975WX;', price: 1724590 },
+            { name: 'Intel Xeon w9-3495X', price: 2048874 },
+            { name: 'AMD Ryzen Threadripper PRO 5995WX', price: 1983118 },
+            { name: 'Intel Core i9-13900K', price: 347837 },
+            { name: 'Intel Core i9-14900KF', price: 242590 },
+            { name: 'Intel Core i9-13900K', price: 198263 },
+            // ... többi CPU
+        ],
+        GPU: [
+            { name: 'NVIDIA Geforce RTX 4090', price: 887900 },
+            { name: 'NVIDIA GeForce RTX 4080', price: 511190 },
+            { name: 'NVIDIA GeForce RTX 4070 Ti', price: 271276 },
+            { name: 'AMD Radeon RX 7900 XTX', price: 340835 },
+            { name: 'NVIDIA GeForce RTX 3090 Ti', price: 535960 },
+            { name: 'AMD Radeon RX 7900 XT', price: 348026 },
+            { name: 'AMD Radeon RX 6950 XT', price: 352224 },
+            { name: 'AMD Radeon RX 6900 XT', price: 352120 },
+            { name: 'NVIDIA GeForce RTX 3070 Ti', price: 174055 },
+            { name: 'AMD Radeon RX 7800 XT', price: 181017 },
+            // ... többi GPU
+        ],
+        HDD: [
+            { name: 'Seagate ST8000NM000A', price: 74118 },
+            // ... többi HDD
+        ],
+        SSD: [
+            { name: 'Crucial T700 M.2 2TB', price: 156290 },
+            { name: 'MSI M570 M.2 2TB', price: 150390 },
+            { name: 'Corsair MP700 M.2 1TB', price: 70000 },
+            { name: 'Samsung SSD 990 PRO M.2;4TB', price: 128690 },
+            { name: 'WD BLACK SN850X M.2 1TB', price: 34290 },
+            // ... többi SSD
+        ],
+    };
+
+    let selectedParts = {
+        CPU: null,
+        GPU: null,
+        HDD: null,
+        SSD: null,
+    };
+
+    function updateSelectedParts() {
+        const selectedPartsDiv = document.getElementById('selected-parts-list');
+        selectedPartsDiv.innerHTML = '';
+
+        let totalPrice = 0;
+
+        for (const partType in selectedParts) {
+            const part = selectedParts[partType];
+            if (part) {
+                selectedPartsDiv.innerHTML += `<p>${partType}: ${part.name} - ${part.price} Ft</p>`;
+                totalPrice += part.price;
+            }
+        }
+
+        const totalPriceElement = document.getElementById('total-price');
+        totalPriceElement.textContent = `Konfiguráció ára: ${totalPrice} Ft`;
+    }
+
+    function selectPart(partType, part) {
+        selectedParts[partType] = part;
+        updateSelectedParts();
+
+        const partsListDiv = document.getElementById('parts-list');
+        const selectedPartElement = partsListDiv.querySelector(`[value="${part.name}"]`);
+        if (selectedPartElement) {
+            const allElements = partsListDiv.querySelectorAll('[value]');
+            allElements.forEach(element => element.classList.remove('highlight'));
+            selectedPartElement.classList.add('highlight');
+        }
+    }
+
+    function handleSelection() {
+        const form = document.getElementById('configForm');
+        const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+
+        checkboxes.forEach(checkbox => {
+            const partType = checkbox.name;
+            const partValue = checkbox.value;
+            const partData = partsData[partType].find(part => part.name === partValue);
+
+            if (checkbox.checked) {
+                // Checkbox kiválasztva: hozzáadás a kiválasztott alkatrészekhez
+                selectPart(partType, partData);
+            } else {
+                // Checkbox leválasztva: eltávolítás a kiválasztott alkatrészek közül
+                selectedParts[partType] = null;
+            }
+        });
+
+        // Frissíti a kiválasztott alkatrészek listáját és az árat
+        updateSelectedParts();
+    }
+
+    function checkOrder() {
+        const orderMessage = document.getElementById('order-message');
+        for (const partType in selectedParts) {
+            if (!selectedParts[partType]) {
+                orderMessage.textContent = 'Minden konfigurációs részletet ki kell választani!';
+                return;
+            }
+        }
+
+        orderMessage.textContent = 'A megrendelés sikeres!';
+        // Itt további intézkedéseket lehet tenni, pl. adatok elküldése stb.
+    }
+
+    // Az űrlapkezelő függvényt hozzáadja a checkboxokhoz
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => checkbox.addEventListener('change', handleSelection));
+</script>
+<br>
+<div class="rating-container">
+    <div class="stars" id="stars">
+        <span class="star" data-rating="1">&#9733;</span>
+        <span class="star" data-rating="2">&#9733;</span>
+        <span class="star" data-rating="3">&#9733;</span>
+        <span class="star" data-rating="4">&#9733;</span>
+        <span class="star" data-rating="5">&#9733;</span>
+    </div>
+    <p id="rating-text">Értékelje a boltot!</p>
+    
+</div>
+<style>
+.rating-container {
+    text-align: center;
+}
+
+.stars {
+    font-size: 36px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.star {
+    margin: 0 10px;
+    color: #ccc;
+}
+
+.star:hover,
+.star.active {
+    color: #ffcc00;
+}
+
+#rating-text {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #555;
+}
+</style>
+<script>document.addEventListener("DOMContentLoaded", function () {
+    const stars = document.querySelectorAll(".star");
+    const ratingText = document.getElementById("rating-text");
+
+    stars.forEach((star) => {
+        star.addEventListener("mouseover", function () {
+            highlightStars(this.dataset.rating);
+        });
+
+        star.addEventListener("mouseout", function () {
+            resetStars();
+        });
+
+        star.addEventListener("click", function () {
+            const rating = this.dataset.rating;
+            ratingText.textContent = `Ön ${rating} csillagot adott a boltnak!`;
+        });
+    });
+
+    function highlightStars(rating) {
+        resetStars();
+        for (let i = 0; i < rating; i++) {
+            stars[i].classList.add("active");
+        }
+    }
+
+    function resetStars() {
+        stars.forEach((star) => {
+            star.classList.remove("active");
+        });
+    }
+});
+</script>
+
+</body>
+</html>
